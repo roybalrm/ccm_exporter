@@ -1,0 +1,42 @@
+clusters:
+  - cluster_name: VNT Alpha
+    username: axl
+    password: password
+    verify: False
+    servers:
+      - server_name: vnt-cm1a.cisco.com
+        server_address: vnt-cm1a.cisco.com
+        collect:
+        - object: Cisco CallManager
+        - object: Cisco SIP
+          instances:
+            - svs-rtp-dmz-cube9a
+            - ecats-uc-vcs2
+          counters:
+            - CallsActive
+            - CallsAttempted
+            - CallsCompleted
+        - object: Cisco SIP Stack
+        - object: TCP
+        - object: Processor
+        - object: Memory
+        - object: Cisco CallManager System Performance
+      - server_name: vnt-cm1b.cisco.com
+        server_address: vnt-cm1b.cisco.com
+        collect:
+        - object: Cisco CallManager
+        - object: Cisco SIP
+        - object: Cisco SIP Stack
+        - object: TCP
+        - object: Processor
+        - object: Memory
+        - object: Cisco CallManager System Performance
+      - server_name: vnt-cm1c.cisco.com
+        server_address: vnt-cm1c.cisco.com
+        collect:
+        - object: Cisco CallManager
+        - object: Cisco SIP Stack
+        - object: TCP
+        - object: Processor
+        - object: Memory
+        - object: Cisco CallManager System Performance
